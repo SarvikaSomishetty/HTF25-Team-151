@@ -1,68 +1,56 @@
-﻿# HTF25-Team-151
+HTF25-Team-151
+Abstract
 
-## GitHub submission guide
+The HTF25-Team-151 project is designed to provide a robust backend application for data processing and API integration, leveraging the Hugging Face API for confidence and label class. The project separates sensitive API tokens from the codebase using environment variables (.env) and ensures a secure, modular structure for development and deployment.
 
-In this Readme, you will find a guide on how to fork this Repository, add files to it, and make a pull request to contribute your changes.
+It is ideal for developers and researchers looking to quickly integrate Hugging Face APIs or build ML-enabled backend services without exposing secret keys.
 
-<details open>
-<summary><h3>1. Login to your GitHub Account</h3></summary>
-<br>
-<p>Go to <a href="https://github.com">github.com</a> to log in.</p>
-<ul>
-   <li>Open the <a href="https://github.com/cbitosc/HTF25-Team-151">current repo</a> in a new tab.</li>
-   <li>Perform all operations in the newly opened tab, and follow the current tab for instructions.</li>
-</ul>
-</details>
+Features
 
-<details open>
-<summary><h3>2. Fork the Repository</h3></summary>
-<br>
-<p align="center">
-  <img src="fork.jpeg" alt="Fork the Repository" height="300">
-</p>
-<ul>
- <li>In the newly opened tab, on the top-right corner, click on <b>Fork</b>.</li>
- <li>Enter the <b>Repository Name</b> as <b>HTF25-Team-151</b>.</li>
- <li>Then click <b>Create Fork</b>, leaving all other fields as default.</li>
- <li>After a few moments, you can view your forked repo.</li>
-</ul>
-</details>
+Hugging Face API integration for confidence and label class.
 
-<details open>
-<summary><h3>3. Clone your Repository</h3></summary>
-<br>
-<ul>
- <li>Click on <b>Code</b> and copy the <b>web URL</b> of your forked repository.</li>
- <li>Open terminal on your local machine.</li>
- <li>Run this command to clone the repo:</li>
-<pre><code>git clone https://github.com/your-username/HTF25-Team-151.git</code></pre>
-</ul>
-</details>
+Modular Python backend (Flask/FastAPI)
 
-<details open>
-<summary><h3>4. Adding files to the Repository</h3></summary>
-<br>
-<ul>
- <li>While doing it for the first time, create a new branch for your changes:</li>
-<pre><code>git checkout -b branch-name</code></pre>
- <li>Add files or modify existing ones.</li>
- <li>Stage your changes:</li>
-<pre><code>git add .</code></pre>
- <li>Commit your changes:</li>
-<pre><code>git commit -m "Descriptive commit message"</code></pre>
- <li>Push your branch to your fork:</li>
-<pre><code>git push origin branch-name</code></pre>
-</ul>
-</details>
+Secure storage of API keys using .env
 
-<details open>
-<summary><h3>5. Create a Pull Request</h3></summary>
-<br>
-<ul>
- <li>Click on the <b>Contribute</b> button in your fork and choose <b>Open Pull Request</b>.</li>
- <li>Leave all fields as default, then click <b>Create Pull Request</b>.</li>
- <li>Wait a few moments; your PR is now submitted.</li>
-</ul>
-</details>
+Easy setup and deployment for local and production environments
 
-## Thanks for participating!
+Installation Instructions
+1. Clone the repository
+git clone https://github.com/SarvikaSomishetty/HTF25-Team-151.git
+cd HTF25-Team-151
+
+2. Create a virtual environment
+
+It’s recommended to use a virtual environment to manage dependencies.
+
+# Windows
+python -m venv venv
+venv\Scripts\activate
+
+# macOS / Linux
+python3 -m venv venv
+source venv/bin/activate
+
+3. Install dependencies
+pip install -r requirements.txt
+
+4. Setup environment variables
+
+Create a .env file in the project root:
+
+HF_TOKEN=your_huggingface_api_token_here
+
+
+Make sure .env is not committed to GitHub (.gitignore already includes .env).
+
+Running the Project
+1. Start the backend server
+# Example for Flask
+python main.py
+
+2. Run in Streamlit
+   python stramlit run app.py
+The server should run on http://127.0.0.1:5000 (or specified port).
+
+2. 
